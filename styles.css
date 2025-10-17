@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding-top: 60px;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  background: linear-gradient(270deg, #ff5733, #ffbd33);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  text-align: center;
+}
+
+@keyframes gradientAnimation {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  z-index: 100;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #ff5733;
+}
+
+header {
+  margin-top: 10%;
+  margin-bottom: 30%;
+}
+header h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 4em;
+  margin: 0.2em 0;
+}
+header h2 {
+  font-family: 'Source Code Pro', monospace;
+  margin: 0.1em 0;
+}
+
+header h3 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2em;
+  margin: 0.1em 0;
+}
+
+header h4 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.5em;
+  margin: 0.05em 0;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+}
+section h2 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2em;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--border-dark);
+}
+section p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* senarai kad kotak*/
+.senarai-kad {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5em;
+  padding: 0;
+  list-style: none;
+  margin: 2em 0;
+}
+
+.senarai-kad li {
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.senarai-kad li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* kontena grid */
+.kontena {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.kontena-kad-bungkus {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.kontena-kad-bungkus img {
+  width: 100%;
+  border-radius: 4px;
+}
+.kontena-kad-bungkus h3 {
+  margin: 0.8em 0 0.4em;
+}
+.kontena-kad-bungkus p {
+  font-size: 0.95em;
+  margin-bottom: 0.6em;
+}
+.kontena-kad-bungkus a {
+  text-decoration: none;
+  color: #ff5733;
+  font-weight: bold;
+}
+
+/*senarai utama*/
+ul.senarai-utama {
+  list-style: disc outside;
+  padding-left: 1.5em;
+}
+
+ul.senarai-utama li ul {
+  list-style: none;
+  margin-top: 0.5em;
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+
+/* Pautan Sosial */
+.pautan-sosial a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.pautan-sosial img {
+  width: 30px;
+}
+.pautan-sosial a:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {margin-top: 50%; margin-bottom: 50%; }
+  header h1 { font-size: 3em; }
+  section { padding: 30px 10px; }
+}
