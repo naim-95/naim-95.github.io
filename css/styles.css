@@ -1,0 +1,18 @@
+/* Subtle Engineering Drafting Grid */
+.drafting-grid {
+  background-color: #F7F7F5;
+  background-image:
+    linear-gradient(to right, rgba(20, 20, 19, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 20, 19, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Smooth Accordion Reveal */
+.accordion-content {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Lock background scroll when lightbox is open */
+body.lightbox-open {
+  overflow: hidden;
+}
